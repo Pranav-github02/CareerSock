@@ -195,7 +195,7 @@ section .banner-hero .banner-inner .banner-imgs .block-2 img {
 section .banner-hero .banner-inner .banner-imgs .block-3 {
     position: absolute;
     top: 21%;
-    right: 220px;
+    right: 195px;
     animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
 }
 
