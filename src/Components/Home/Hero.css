@@ -1,0 +1,217 @@
+.home-bg {
+    background-image: url(./media/bg-banner.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    min-height: 750px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+section {
+    display: inline-block;
+    width: 100%;
+}
+
+section .banner-hero {
+    padding: 0 65px 0 15px;
+    position: relative;
+    max-width: 1770px;
+    margin: 0 auto;
+}
+
+section .banner-hero .banner-inner {
+    z-index: 5;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+section .banner-hero .banner-inner .banner {
+    position: relative;
+    z-index: 12;
+    padding: 50px 180px 80px 192px;
+}
+
+section .banner-hero .banner-inner .banner .heading-banner {
+    font-size: 48px;
+    line-height: 60px;
+    color: #05264e;
+}
+
+section .banner-hero .banner-inner .banner .heading-banner span {
+    color: #3c65f5;
+    position: relative;
+}
+
+section .banner-hero .banner-inner .banner .banner-desc {
+    position: relative;
+    font-size: 18px;
+    color: #4f5e64;
+    margin-top: 20px !important;
+}
+
+section .banner-hero .banner-inner .banner .form-find {
+    margin-top: 40px !important;
+    background: #fff;
+    box-shadow: 0 18px 40px rgb(25 15 9 / 10%);
+    border-radius: 8px;
+    display: inline-block;
+    padding: 10px;
+}
+
+section .banner-hero .banner-inner .banner .form-find form {
+    display: flex;
+    width: 100%;
+}
+
+section .banner-hero .banner-inner .banner .form-find .industry-box {
+    width: 100%;
+    max-width: 180px;
+    padding-top: 5px;
+}
+
+section .banner-hero .banner-inner .banner .form-find .industry-box .form-input {
+    margin-right: 10px !important;
+    border: 0 solid rgba(26, 15, 9, .1);
+    border-radius: 0;
+    padding: 10px 20px 10px 34px;
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    box-shadow: none;
+    color: #4f5e64;
+    word-wrap: normal;
+}
+
+section .banner-hero .banner-inner .banner .form-find .industry-box .form-input option {
+    background: #fff;
+    border: 0 solid #626262;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+section .banner-hero .banner-inner .banner .form-find .industry-box .industry {
+    background: url(./media/icon-job.svg) no-repeat left 10px center;
+}
+
+section .banner-hero .banner-inner .banner .form-find .industry-box .location {
+    background: url(./media/icon-location.svg) no-repeat left 10px center;
+}
+
+section .banner-hero .banner-inner .banner .form-find button {
+    margin-left: 14px;
+    min-width: 122px;
+    padding-left: 34px;
+    padding-right: 15px;
+    background-image: url(./media/search-icon.svg);
+    background-repeat: no-repeat;
+    background-position: left 19px top 17px;
+    /* padding: 10px 25px; */
+}
+
+section .banner-hero .banner-inner .banner .list-tags {
+    margin-top: 60px !important;
+    position: relative;
+}
+
+section .banner-hero .banner-inner .banner .list-tags strong {
+    font-size: 14px;
+    color: #4f5e64;
+}
+
+section .banner-hero .banner-inner .banner .list-tags a {
+    /* text-decoration: none; */
+    color: #4f5e64;
+    font-size: 14px;
+    margin-left: 2px;
+    margin-right: 5px;
+}
+
+section .banner-hero .banner-inner .banner-imgs {
+    padding: 65px 0 0;
+    position: relative;
+    height: 100%;
+    min-height: 540px;
+}
+
+@keyframes hero-thumb-animation {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+section .banner-hero .banner-inner .banner-imgs .block-1 {
+    position: absolute;
+    top: 10%;
+    left: -150px;
+    animation: hero-thumb-animation 2s linear infinite alternate;
+}
+
+section .banner-hero .banner-inner .banner-imgs .block-1 img {
+    max-width: 100%;
+    transition: all .3s ease 0s;
+}
+
+@keyframes hero-thumb-sm-animation {
+    0% {
+        transform: translateY(-20px) translateX(50px);
+    }
+
+    100% {
+        transform: translateY(-20px) translateX(0);
+    }
+}
+
+section .banner-hero .banner-inner .banner-imgs .block-2 {
+    position: absolute;
+    bottom: 0;
+    right: 120px;
+    animation: hero-thumb-sm-animation 4s linear infinite alternate;
+}
+
+section .banner-hero .banner-inner .banner-imgs .block-2 img {
+    max-width: 100%;
+    transition: all .3s ease 0s;
+}
+
+@keyframes hero-thumb-sm-2-animation {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+section .banner-hero .banner-inner .banner-imgs .block-3 {
+    position: absolute;
+    top: 21%;
+    right: 220px;
+    animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+}
+
+section .banner-hero .banner-inner .banner-imgs .block-3 img {
+    max-width: 100%;
+    transition: all .3s ease 0s;
+}
+
+section .banner-hero .banner-inner .banner-imgs .block-4 {
+    position: absolute;
+    bottom: 8%;
+    left: -80px;
+    animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+}
+
+section .banner-hero .banner-inner .banner-imgs .block-4 img {
+    max-width: 100%;
+    transition: all .3s ease 0s;
+}
