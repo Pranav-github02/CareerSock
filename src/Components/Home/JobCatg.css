@@ -1,0 +1,69 @@
+.jobcatg .title {
+    font-weight: 700;
+    color: #05264e;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.jobcatg p {
+    color: #66789c;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.jobcatg .catg-block {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.jobcatg .catg-block .inner-box {
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #ECEDF2;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.jobcatg .catg-block .inner-box .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jobcatg .catg-block .inner-box .content .icon {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    background: #ECEDF2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1967D2;
+    font-size: 36px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: all 300ms ease;
+}
+
+.jobcatg .catg-block .inner-box:hover .icon {
+    background: #1967D2;
+    ;
+    color: white;
+}
+
+.jobcatg .catg-block .inner-box .content h4 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 29px;
+}
+
+.jobcatg .catg-block .inner-box .content p {
+    font-size: 14px;
+    color: #696969;
+    font-weight: 400;
+}
