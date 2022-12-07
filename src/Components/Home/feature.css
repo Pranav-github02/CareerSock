@@ -1,0 +1,82 @@
+.feature {
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+}
+
+.feature .job-image {
+    position: relative;
+}
+
+.feature .job-image .img-1 {
+    position: absolute;
+    top: -70px;
+    left: -120px;
+    max-width: 100%;
+}
+
+.feature .job-image .img-2 {
+    position: absolute;
+    bottom: -170px;
+    right: -80px;
+    max-width: 100%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.feature .job-image figure {
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: var(--animate-duration);
+    animation-fill-mode: both;
+}
+
+.feature .job-image figure img {
+    border-radius: 32px;
+    max-width: 80%;
+}
+
+.feature .content-job-inner {
+    padding-left: 60px;
+    padding: 40px;
+}
+
+.feature .content-job-inner .text-32 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    color: #a0abb8;
+}
+
+.feature .content-job-inner h2 {
+    font-size: 52px;
+    line-height: 66px;
+    font-weight: 700;
+    color: #05264e;
+}
+
+.feature .content-job-inner h2 span {
+    color: #3c65f5;
+}
+
+.feature .content-job-inner .sub-text {
+    margin-top: 40px !important;
+    padding-right: 50px !important;
+}
+
+.feature .content-job-inner .buttons {
+    margin-top: 40px !important;
+}
+
+.feature .content-job-inner .buttons input {
+    color: #fff;
+    line-height: 26px;
+    padding: 10px 25px;
+}

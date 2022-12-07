@@ -1,7 +1,7 @@
 import React from 'react'
+import Feature from './Feature'
 import Hero from './Hero'
 import JobCatg from './JobCatg'
-import Testimonials from './Testimonials'
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
       <Hero />
       <div style={{marginTop:"100px"}}></div>
       <JobCatg />
-      <Testimonials />
+      <Feature />
     </div>
   )
 }
