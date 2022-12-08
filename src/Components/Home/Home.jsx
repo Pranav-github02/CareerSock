@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <div style={{marginTop:"100px"}}></div>
+      <div style={{ marginTop: "100px" }}></div>
       <JobCatg />
       <Feature />
       <Newsletter />
