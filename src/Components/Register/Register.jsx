@@ -62,12 +62,12 @@ const Register = () => {
                                     </label>
                                 </div>
                                 <div className='button'>
-                                    <input className='btn' type='button' value='Submit & Register'/>
+                                    <input className='btn' type='button' value='Submit & Register' />
                                 </div>
                                 <div className='text-center text-muted'>
                                     Already have an account?
                                     <NavLink to="/login">Sign in</NavLink>
-                                </div> 
+                                </div>
                             </form>
                         </div>
                         <div className='img-1 d-none d-lg-block'>
