@@ -20,7 +20,7 @@ const Register = () => {
         });
         google.accounts.id.renderButton(
             document.getElementById("signUpDiv"),
-            { theme: "outline", size: "large", shape: "pill", text: "signup_with", width: "350px", logo_alignment: "center" }
+            { theme: "outline", size: "large", shape: "pill", text: "signup_with", width: "400px", logo_alignment: "center" }
         );
     }, [])
     return (
