@@ -40,19 +40,19 @@ const Register = () => {
                             </div>
                             <form className='login-register text-start'>
                                 <div className='form-group'>
-                                    <label className='form-label' for="input-1">Full Name *</label>
+                                    <label className='form-label' htmlFor="input-1">Full Name *</label>
                                     <input className='form-control' id='input-1' type='text' required placeholder='Pranav Jindal' />
                                 </div>
                                 <div className='form-group'>
-                                    <label className='form-label' for="input-2">Email *</label>
+                                    <label className='form-label' htmlFor="input-2">Email *</label>
                                     <input className='form-control' id='input-2' type='email' required placeholder='pranavjindal@gmail.com' />
                                 </div>
                                 <div className='form-group'>
-                                    <label className='form-label' for="input-3">Password *</label>
+                                    <label className='form-label' htmlFor="input-3">Password *</label>
                                     <input className='form-control' id='input-3' type='password' required placeholder="************" />
                                 </div>
                                 <div className='form-group'>
-                                    <label className='form-label' for="input-4">Re-enter password *</label>
+                                    <label className='form-label' htmlFor="input-4">Re-enter password *</label>
                                     <input className='form-control' id='input-4' type='password' required placeholder="************" />
                                 </div>
                                 <div className='footer d-flex justify-content-between'>
