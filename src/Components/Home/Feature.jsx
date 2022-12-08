@@ -25,7 +25,7 @@ const Feature = () => {
                                 Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 400,000 companies worldwide. The right job is out there.
                             </div>
                             <div className='buttons'>
-                                <input className='btn btn-primary' type='button' value='Search jobs' />
+                                <input className='btn btn-primary' type='button' value='Search Jobs' />
                             </div>
                         </div>
                     </div>
