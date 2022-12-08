@@ -1,4 +1,9 @@
-.navbar .navbar-collapse {
-    position: absolute;
-    left: 40%;
+.navbar #navbar {
+    /* margin-right: 100px; */
+}
+
+.navbar .login-signup {
+    /* display: inline-block; */
+    /* min-width: 215px;
+    text-align: right; */
 }
