@@ -16,7 +16,7 @@ const Hero = () => {
                             <div className='col-xl-8 col-lg-12'>
                                 <div className='banner'>
                                     <h1 className='heading-banner'>
-                                        The <span>Easiest Way</span><br className='d-none d-lg-block' />
+                                        The <span>Easiest Way </span><br className='d-none d-lg-block' />
                                         to Get your New Job
                                     </h1>
                                     <div className='banner-desc'>
