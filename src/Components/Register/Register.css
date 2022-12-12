@@ -75,13 +75,14 @@
 }
 
 .main .register .register-cover .login-register .form-group,
-.main .register .register-cover .login-register .footer,
+.main .register .register-cover .login-register .footer1,
 .main .register .register-cover .login-register .button {
     margin-bottom: 1rem;
     position: relative;
 }
 
-.main .register .register-cover .login-register .form-group input {
+.main .register .register-cover .login-register .form-group input,
+.main .register .register-cover .login-register .form-group select {
     /* height: 53px;
     line-height: 53px; */
     font-size: 14px;
@@ -92,7 +93,7 @@
     padding: 11px 15px 13px;
 }
 
-.main .register .register-cover .login-register .footer label {
+.main .register .register-cover .login-register .footer11 label {
     display: block;
     position: relative;
     padding-left: 10px;
@@ -101,7 +102,7 @@
     line-height: 21px;
 }
 
-.main .register .register-cover .login-register .footer input {
+.main .register .register-cover .login-register .footer1 input {
     cursor: pointer;
     font-size: 14px;
     background: #fff;
@@ -110,7 +111,7 @@
     padding-left: 18px;
 }
 
-.main .register .register-cover .login-register .footer span {
+.main .register .register-cover .login-register .footer1 span {
     margin-left: 5px;
     font-size: 14px;
     font-weight: 500;
@@ -123,7 +124,7 @@
     background: #05264e;
     color: #fff;
     border-radius: 4px;
-    width: 100%!important;
+    width: 100% !important;
     font-size: 14px;
 }
 
@@ -135,28 +136,28 @@
     font-size: 14px;
 }
 
-.main .register .register-cover .login-register .text-muted a{
+.main .register .register-cover .login-register .text-muted a {
     text-decoration: none;
 }
 
-.main .register .register-cover .login-register .text-muted a{
+.main .register .register-cover .login-register .text-muted a {
     text-decoration: none;
 }
 
-.main .register .register-cover .img-1{
+.main .register .register-cover .img-1 {
     position: absolute;
     right: 10%;
     top: 20%;
     width: unset;
 }
 
-.main .register .register-cover .img-1 img{
+.main .register .register-cover .img-1 img {
     max-width: 100%;
     animation: hero-thumb-animation 2s linear infinite alternate;
     transition: all .3s ease 0s;
 }
 
-.main .register .register-cover .img-2 img{
+.main .register .register-cover .img-2 img {
     max-width: 100%;
     transition: all .3s ease 0s;
 }

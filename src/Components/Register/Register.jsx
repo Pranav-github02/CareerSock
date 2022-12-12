@@ -55,7 +55,15 @@ const Register = () => {
                                     <label className='form-label' htmlFor="input-4">Re-enter password *</label>
                                     <input className='form-control' id='input-4' type='password' required placeholder="************" />
                                 </div>
-                                <div className='footer d-flex justify-content-between'>
+                                <div className='form-group'>
+                                    <label className='form-label' htmlFor="input-5">I am *</label>
+                                    <select className='form-control' id='input-5' required >
+                                        <option>Please Select</option>
+                                        <option>Individual</option>
+                                        <option>Recruiter</option>
+                                    </select>
+                                </div>
+                                <div className='footer1 d-flex justify-content-between'>
                                     <label>
                                         <input type='checkbox' required />
                                         <span>Agree to our terms & conditions</span>

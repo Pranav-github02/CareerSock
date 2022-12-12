@@ -47,7 +47,7 @@ const Signin = () => {
                                     <label className='form-label' htmlFor="input-2">Password *</label>
                                     <input className='form-control' id='input-2' type='password' required placeholder="************" />
                                 </div>
-                                <div className='footer d-flex justify-content-between'>
+                                <div className='footer1 d-flex justify-content-between'>
                                     <label>
                                         <input type='checkbox' required />
                                         <span>Remember me</span>
