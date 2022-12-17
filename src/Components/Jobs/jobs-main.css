@@ -1,0 +1,130 @@
+.jobs-main {
+    margin-top: 30px !important;
+    width: 100%;
+    overflow: visible;
+    display: inline-block;
+}
+
+.jobs-main .card {
+    border-radius: 8px;
+    border: 1px solid #e0e6f7;
+    overflow: hidden;
+    margin-bottom: 24px;
+    position: relative;
+    background: #f8faff;
+    transition: all .25s cubic-bezier(.02, .01, .47, 1);
+}
+
+.jobs-main .card:hover .card-info .bottom .btn {
+    color: #fff;
+    background-color: #3c65f5;
+}
+
+.jobs-main .card .upper {
+    padding: 30px 20px 15px;
+    display: flex;
+    position: relative;
+}
+
+.jobs-main .card .upper .image {
+    min-width: 52px;
+    padding-right: 15px;
+}
+
+.jobs-main .card .upper .image img {
+    width: 55px;
+    height: 54px;
+}
+
+.jobs-main .card .upper .info p {
+    font-size: 18px;
+    line-height: 26px;
+    color: #05264e;
+    font-weight: 700;
+    display: block;
+    margin: 0;
+}
+
+.jobs-main .card .upper .info span {
+    font-size: 12px;
+    color: #a0abb8;
+}
+
+.jobs-main .card .upper .info span i {
+    margin-right: 7px;
+}
+
+.jobs-main .card .card-info {
+    padding: 0 20px 30px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.jobs-main .card .card-info h6 {
+    color: #05264e;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.jobs-main .card .card-info .type {
+    margin-top: 5px;
+}
+
+.jobs-main .card .card-info .type span {
+    font-size: 12px;
+    color: #a0abb8;
+}
+
+.jobs-main .card .card-info .type span i {
+    margin-right: 6px;
+}
+
+.jobs-main .card .card-info .type .time {
+    padding-left: 15px;
+}
+
+.jobs-main .card .card-info p {
+    margin-top: 15px !important;
+    color: #4f5e64;
+    font-weight: 500;
+    font-size: 14px !important;
+    line-height: 22px !important;
+}
+
+.jobs-main .card .card-info .skills {
+    margin-top: 30px !important;
+    width: 100%;
+}
+
+.jobs-main .card .card-info .skills a {
+    margin-right: 5px !important;
+    text-decoration: none;
+    color: #05264e;
+    margin-right: 5px !important;
+    background-color: #eff3fc;
+    font-size: 12px;
+    padding: 8px 7px;
+    border-radius: 5px;
+    color: #4f5e64 !important;
+}
+
+.jobs-main .card .card-info .bottom {
+    margin-top: 30px !important;
+}
+
+.jobs-main .card .card-info .bottom .sal {
+    color: #3c65f5;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.jobs-main .card .card-info .bottom .btn {
+    color: #3c65f5;
+    background-color: #e0e6f7;
+    padding: 12px 10px;
+    min-width: 95px;
+    border-radius: 4px;
+    font-size: 12px;
+}
