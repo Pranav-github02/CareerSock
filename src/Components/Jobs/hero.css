@@ -1,0 +1,122 @@
+.jobs-hero {
+    display: block;
+}
+
+.jobs-hero .banner-hero {
+    padding: 40px 20px 60px;
+    background: #f2f6fd;
+    border-radius: 16px;
+    position: relative;
+    max-width: 1770px;
+    margin: 0 auto;
+}
+
+.jobs-hero .banner-hero::before {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: -3px;
+    height: 170px;
+    width: 218px;
+    background: url(./media/left-job-head.svg) no-repeat 0 100%;
+    background-size: contain;
+    display: inline;
+    top: auto;
+    right: auto;
+}
+
+.jobs-hero .banner-hero::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    right: 5px;
+    height: 170px;
+    width: 213px;
+    background: url(./media/right-job-head.svg) no-repeat 0 100%;
+    background-size: contain;
+}
+
+.jobs-hero .banner-hero .block-banner {
+    padding: 0;
+    max-width: 850px;
+    margin: auto;
+    position: relative;
+    z-index: 12;
+}
+
+.jobs-hero .banner-hero .block-banner h3 {
+    color: #05264e;
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 700;
+}
+
+.jobs-hero .banner-hero .block-banner h3 span {
+    color: #3c65f5;
+}
+
+.jobs-hero .banner-hero .block-banner .subtitle {
+    margin-top: 10px !important;
+    color: #66789c;
+    font-size: 15px !important;
+    line-height: 22px !important;
+}
+
+.jobs-hero .banner-hero .block-banner .form-find {
+    margin-top: 40px !important;
+    background: #fff;
+    box-shadow: 0 18px 40px rgb(25 15 9 / 10%);
+    border-radius: 8px;
+    display: inline-block;
+    padding: 10px;
+}
+
+.jobs-hero .banner-hero .block-banner .form-find form {
+    display: flex;
+    width: 100%;
+}
+
+.jobs-hero .banner-hero .block-banner .form-find .industry-box {
+    width: 100%;
+    max-width: 180px;
+    padding-top: 5px;
+}
+
+.jobs-hero .banner-hero .block-banner .form-find .industry-box .form-input {
+    margin-right: 10px !important;
+    border: 0 solid rgba(26, 15, 9, .1);
+    border-radius: 0;
+    padding: 10px 20px 10px 34px;
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    box-shadow: none;
+    color: #4f5e64;
+    word-wrap: normal;
+}
+
+.jobs-hero .banner-hero .block-banner .form-find .industry-box .form-input option {
+    background: #fff;
+    border: 0 solid #626262;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.jobs-hero .banner-hero .block-banner .form-find .industry-box .industry {
+    background: url(./media/icon-job.svg) no-repeat left 10px center;
+}
+
+.jobs-hero .banner-hero .block-banner .form-find .industry-box .location {
+    background: url(./media/icon-location.svg) no-repeat left 10px center;
+}
+
+.jobs-hero .banner-hero .block-banner .form-find button {
+    margin-left: 14px;
+    min-width: 122px;
+    padding-left: 34px;
+    padding-right: 15px;
+    background-image: url(./media/search-icon.svg);
+    background-repeat: no-repeat;
+    background-position: left 19px top 17px;
+    /* padding: 10px 25px; */
+}

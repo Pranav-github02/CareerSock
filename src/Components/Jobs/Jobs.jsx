@@ -1,8 +1,11 @@
 import React from 'react'
+import Hero from './Hero'
 
 const Jobs = () => {
   return (
-    <div>Jobs</div>
+    <div>
+      <Hero />
+    </div>
   )
 }
 
