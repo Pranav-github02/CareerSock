@@ -1,15 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import jwt_decode from 'jwt-decode'
 import './Register.css'
 import img1 from './media/img-1.svg'
 import img2 from './media/img-2.svg'
 
 const Register = () => {
+    const navigate = useNavigate();
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [type, setType] = useState("")
+    const signupWithGoogle = async (data) => {
+        const user = {
+            name: data.name,
+            email: data.email,
+            password: "loggedinwithgoogle",
+            type: "individual"
+        }
+        console.log(user);
+        const res = await fetch("http://localhost:5000/signup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user)
+        });
+        if (res.status === 500 || !res) {
+            window.alert("Registeration Failed");
+        } else if (res.status === 400) {
+            window.alert("Account already exists, Please Signin")
+            navigate("/login")
+        } else if (res.status === 201) {
+            window.alert("Registeration Successful");
+            navigate("/");
+        }
+    }
     function handleCallbackResponse(response) {
         var data = jwt_decode(response.credential);
-        console.log(data.email);
+        signupWithGoogle(data)
     }
 
     useEffect(() => {
@@ -23,6 +53,42 @@ const Register = () => {
             { theme: "outline", size: "large", shape: "pill", text: "signup_with", width: "400px", logo_alignment: "center" }
         );
     }, [])
+
+    const signup = async (e) => {
+        e.preventDefault();
+        if (
+            name === "" ||
+            email === "" ||
+            password === "" ||
+            type === ""
+        ) {
+            alert("Please fill all fields correctly");
+        } else {
+            const user = {
+                name: name,
+                email: email,
+                password: password,
+                type: type
+            }
+            const res = await fetch("http://localhost:5000/signup", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(user)
+            });
+            if (res.status === 500 || !res) {
+                window.alert("Registeration Failed");
+            } else if (res.status === 400) {
+                window.alert("Account already exists, Please Signin")
+                navigate("/login")
+            } else if (res.status === 201) {
+                window.alert("Registeration Successful");
+                navigate("/");
+            }
+        }
+    }
+
     return (
         <div className='main'>
             <section className='register'>
@@ -41,26 +107,26 @@ const Register = () => {
                             <form className='login-register text-start'>
                                 <div className='form-group'>
                                     <label className='form-label' htmlFor="input-1">Full Name *</label>
-                                    <input className='form-control' id='input-1' type='text' required placeholder='Pranav Jindal' />
+                                    <input className='form-control' id='input-1' type='text' required placeholder='Pranav Jindal' onChange={(e) => setName(e.target.value)} />
                                 </div>
                                 <div className='form-group'>
                                     <label className='form-label' htmlFor="input-2">Email *</label>
-                                    <input className='form-control' id='input-2' type='email' required placeholder='pranavjindal@gmail.com' />
+                                    <input className='form-control' id='input-2' type='email' required placeholder='pranavjindal@gmail.com' onChange={(e) => setEmail(e.target.value)} />
                                 </div>
                                 <div className='form-group'>
                                     <label className='form-label' htmlFor="input-3">Password *</label>
-                                    <input className='form-control' id='input-3' type='password' required placeholder="************" />
+                                    <input className='form-control' id='input-3' type='password' required placeholder="************" onChange={(e) => setPassword(e.target.value)} />
                                 </div>
                                 <div className='form-group'>
                                     <label className='form-label' htmlFor="input-4">Re-enter password *</label>
-                                    <input className='form-control' id='input-4' type='password' required placeholder="************" />
+                                    <input className='form-control' id='input-4' type='password' required placeholder="************" onChange={(e) => password === e.target.value ? console.log("Passwords match") : console.log("Passwords do not match")} />
                                 </div>
                                 <div className='form-group'>
                                     <label className='form-label' htmlFor="input-5">I am *</label>
-                                    <select className='form-control' id='input-5' required >
-                                        <option>Please Select</option>
-                                        <option>Individual</option>
-                                        <option>Recruiter</option>
+                                    <select className='form-control' id='input-5' required onChange={(e) => e.target.value === "0" ? window.alert("PLEASE CHOOSE A VALID OPTION") : setType(e.target.value)}>
+                                        <option value={"0"}>Please Select</option>
+                                        <option value={"Individual"}>Individual</option>
+                                        <option value={"Recruiter"}>Recruiter</option>
                                     </select>
                                 </div>
                                 <div className='footer1 d-flex justify-content-between'>
@@ -70,7 +136,7 @@ const Register = () => {
                                     </label>
                                 </div>
                                 <div className='button'>
-                                    <input className='btn' type='button' value='Submit & Register' />
+                                    <input className='btn' type='button' value='Submit & Register' onClick={(e) => signup(e)} />
                                 </div>
                                 <div className='text-center text-muted'>
                                     Already have an account?

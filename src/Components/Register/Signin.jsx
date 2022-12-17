@@ -1,16 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import jwt_decode from 'jwt-decode'
 import './Register.css'
 import img1 from './media/img-4.svg'
 import img2 from './media/img-3.svg'
 
 const Signin = () => {
+    const navigate = useNavigate();
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const signinWithGoogle = async (data) => {
+        const user = {
+            email: data.email,
+            password: "loggedinwithgoogle"
+        }
+        console.log(user);
+        const res = await fetch("http://localhost:5000/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user)
+        });
+        if (res.status === 500 || !res) {
+            window.alert("Signin Failed");
+        } else if (res.status === 400) {
+            window.alert("Incorrect email or password")
+        } else if (res.status === 201) {
+            window.alert("Signin successful")
+            navigate("/");
+        }
+    }
     function handleCallbackResponse(response) {
         var data = jwt_decode(response.credential);
-        console.log(data.email);
+        signinWithGoogle(data);
     }
+    console.log();
 
     useEffect(() => {
         /* global google*/
@@ -23,6 +49,37 @@ const Signin = () => {
             { theme: "outline", size: "large", shape: "pill", text: "signin_with", width: "400px", logo_alignment: "center" }
         );
     }, [])
+
+    const signin = async (e) => {
+        e.preventDefault();
+        if (
+            email === "" ||
+            password === ""
+        ) {
+            alert("Please fill all fields correctly");
+        } else {
+            const user = {
+                email: email,
+                password: password
+            }
+            const res = await fetch("http://localhost:5000/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(user)
+            });
+            if (res.status === 500 || !res) {
+                window.alert("Signin Failed");
+            } else if (res.status === 400) {
+                window.alert("Incorrect email or password")
+            } else if (res.status === 201) {
+                window.alert("Signin successful")
+                navigate("/");
+            }
+        }
+    }
+
     return (
         <div className='main'>
             <section className='register'>
@@ -41,11 +98,11 @@ const Signin = () => {
                             <form className='login-register text-start'>
                                 <div className='form-group'>
                                     <label className='form-label' htmlFor="input-1">Email *</label>
-                                    <input className='form-control' id='input-1' type='email' required placeholder='pranavjindal@gmail.com' />
+                                    <input className='form-control' id='input-1' type='email' required placeholder='pranavjindal@gmail.com' onChange={(e) => setEmail(e.target.value)} />
                                 </div>
                                 <div className='form-group'>
                                     <label className='form-label' htmlFor="input-2">Password *</label>
-                                    <input className='form-control' id='input-2' type='password' required placeholder="************" />
+                                    <input className='form-control' id='input-2' type='password' required placeholder="************" onChange={(e) => setPassword(e.target.value)} />
                                 </div>
                                 <div className='footer1 d-flex justify-content-between'>
                                     <label>
@@ -54,7 +111,7 @@ const Signin = () => {
                                     </label>
                                 </div>
                                 <div className='button'>
-                                    <input className='btn' type='button' value='Login' />
+                                    <input className='btn' type='button' value='Login' onClick={(e) => signin(e)} />
                                 </div>
                                 <div className='text-center text-muted'>
                                     Don't have an Account?
