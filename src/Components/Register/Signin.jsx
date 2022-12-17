@@ -36,7 +36,6 @@ const Signin = () => {
         var data = jwt_decode(response.credential);
         signinWithGoogle(data);
     }
-    console.log();
 
     useEffect(() => {
         /* global google*/
