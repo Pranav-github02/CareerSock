@@ -11,7 +11,7 @@ const Hero = () => {
                             Available Now
                         </h3>
                         <div className='subtitle'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br />
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br className='d-none d-xl-block' />
                             incididunt ut labore et dolore magna aliqua.
                         </div>
                         <div className='form-find'>

@@ -1,0 +1,86 @@
+.recruiters-hero .banner-hero {
+    padding: 40px 20px 60px;
+    background: #f2f6fd;
+    border-radius: 16px;
+    position: relative;
+    max-width: 1770px;
+    margin: 0 auto;
+}
+
+.recruiters-hero .banner-hero .banner-block {
+    padding: 0;
+    position: relative;
+    z-index: 12;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+.recruiters-hero .banner-hero .banner-block h3 {
+    animation-name: fadeInUp;
+    animation-duration: var(--animate-duration);
+    animation-fill-mode: both;
+    color: #05264e;
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 700;
+}
+
+.recruiters-hero .banner-hero .banner-block .subtext {
+    margin-top: 10px !important;
+    color: #66789c;
+    font-weight: 500;
+    font-size: 14px !important;
+    line-height: 22px !important;
+}
+
+.recruiters-hero .banner-hero .banner-block .list-char {
+    background: #fff;
+    border: 1px solid #e0e6f7;
+    border-radius: 8px;
+    padding: 10px;
+    display: table;
+    table-layout: fixed;
+    max-width: 90%;
+    margin: 30px auto auto;
+    width: 100%;
+}
+
+.recruiters-hero .banner-hero .banner-block .list-char ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.recruiters-hero .banner-hero .banner-block .list-char ul li{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.recruiters-hero .banner-hero .banner-block .list-char ul li a{
+    font-size: 16px;
+    line-height: 28px;
+    color: #4f5e64;
+    display: inline-block;
+    width: 28px;
+    max-width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.recruiters-hero .banner-hero .banner-block .list-char ul li a:hover{
+    background-color: #e0e6f7;
+    border-radius: 50%;
+    color: #3c65f5;
+}
