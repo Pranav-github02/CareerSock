@@ -1,8 +1,43 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from "react-router-dom";
 import logo from './logo.png'
 import './Navbar.css'
+import { UserContext } from '../../App';
 const Navbar = () => {
+    const { state, dispatch } = useContext(UserContext)
+    const Logout = async () => {
+        const res = await fetch("http://localhost:5000/logout", {
+            method: "GET",
+        });
+        if (res.status === 200) {
+            console.log("session destroyed");
+            dispatch({ type: "USER", payload: false })
+        }
+    }
+    const RenderMenu = () => {
+        if (state) {
+            return (
+                <div className="navbar-nav">
+                    <NavLink to="/" className="nav-link" aria-current="page">Home</NavLink>
+                    <NavLink to="/jobs" className="nav-link">Jobs</NavLink>
+                    <NavLink to="/recruiters" className="nav-link">Recruiters</NavLink>
+                    {/* <NavLink className="nav-link" to="/signup">Register</NavLink>
+                            <NavLink className="nav-link" to="/login"><input className='btn btn-primary' type="button" value="Sign in" /></NavLink> */}
+                    <NavLink className="nav-link" onClick={() => Logout()}>Logout</NavLink>
+                </div>
+            )
+        } else {
+            return (
+                <div className="navbar-nav">
+                    <NavLink to="/" className="nav-link" aria-current="page">Home</NavLink>
+                    <NavLink to="/jobs" className="nav-link">Jobs</NavLink>
+                    <NavLink to="/recruiters" className="nav-link">Recruiters</NavLink>
+                    <NavLink className="nav-link" to="/signup">Register</NavLink>
+                    <NavLink className="nav-link" to="/login"><input className='btn btn-primary' type="button" value="Sign in" /></NavLink>
+                </div>
+            )
+        }
+    }
     return (
         <div className='container'>
             <nav className="navbar navbar-expand-lg sticky-top">
@@ -14,16 +49,7 @@ const Navbar = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navbar">
-                        <div className="navbar-nav">
-                            <NavLink to="/" className="nav-link" aria-current="page">Home</NavLink>
-                            <NavLink to="/jobs" className="nav-link">Jobs</NavLink>
-                            <NavLink to="/recruiters" className="nav-link">Recruiters</NavLink>
-                            <NavLink to="/support" className="nav-link">Contact</NavLink>
-                            {/* <div className='login-signup'> */}
-                                <NavLink className="nav-link" to="/signup">Register</NavLink>
-                                <NavLink className="nav-link" to="/login"><input className='btn btn-primary' type="button" value="Sign in" /></NavLink>
-                            {/* </div> */}
-                        </div>
+                        <RenderMenu />
                     </div>
                 </div>
             </nav>

@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import jwt_decode from 'jwt-decode'
 import './Register.css'
 import img1 from './media/img-4.svg'
 import img2 from './media/img-3.svg'
+import { UserContext } from '../../App';
 
 const Signin = () => {
+    const { state, dispatch } = useContext(UserContext)
     const navigate = useNavigate();
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -15,7 +17,6 @@ const Signin = () => {
             email: data.email,
             password: "loggedinwithgoogle"
         }
-        console.log(user);
         const res = await fetch("http://localhost:5000/login", {
             method: "POST",
             headers: {
@@ -28,6 +29,7 @@ const Signin = () => {
         } else if (res.status === 400) {
             window.alert("Incorrect email or password")
         } else if (res.status === 201) {
+            dispatch({ type: "USER", payload: true })
             window.alert("Signin successful")
             navigate("/");
         }
@@ -119,10 +121,10 @@ const Signin = () => {
                             </form>
                         </div>
                         <div className='img-1 d-none d-lg-block'>
-                            <img src={img1} />
+                            <img src={img1} alt=""/>
                         </div>
                         <div className='img-2'>
-                            <img src={img2} />
+                            <img src={img2} alt=""/>
                         </div>
                     </div>
                 </div>

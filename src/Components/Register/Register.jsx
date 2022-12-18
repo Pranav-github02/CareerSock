@@ -19,8 +19,7 @@ const Register = () => {
             password: "loggedinwithgoogle",
             type: "individual"
         }
-        console.log(user);
-        const res = await fetch("http://localhost:5000/signup", {
+        const res = await fetch("https://careersockserver-env-1.eba-pjpi9zpp.ap-south-1.elasticbeanstalk.com/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -145,10 +144,10 @@ const Register = () => {
                             </form>
                         </div>
                         <div className='img-1 d-none d-lg-block'>
-                            <img src={img1} />
+                            <img src={img1} alt=""/>
                         </div>
                         <div className='img-2'>
-                            <img src={img2} />
+                            <img src={img2} alt=""/>
                         </div>
                     </div>
                 </div>

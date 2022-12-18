@@ -3,7 +3,9 @@ import './feature.css'
 import img1 from './media/img-chart.png'
 import img2 from './media/controlcard.png'
 import img from './media/img.png'
+import { useNavigate } from 'react-router-dom'
 const Feature = () => {
+    const navigate = useNavigate();
     return (
         <div className='feature'>
             <div className='container'>
@@ -25,7 +27,7 @@ const Feature = () => {
                                 Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 400,000 companies worldwide. The right job is out there.
                             </div>
                             <div className='buttons'>
-                                <input className='btn btn-primary' type='button' value='Search Jobs' />
+                                <input className='btn btn-primary' type='button' value='Search Jobs' onClick={() => navigate("/jobs")} />
                             </div>
                         </div>
                     </div>
