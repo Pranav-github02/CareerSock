@@ -1,0 +1,50 @@
+.recruiters-main {
+    margin-top: 30px !important;
+    width: 100%;
+    overflow: visible;
+    display: inline-block;
+}
+
+.recruiters-main .card {
+    border-radius: 10px;
+    border: 0.88px solid #e0e6f7;
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+    background: #f8faff;
+    text-align: center;
+    padding: 30px;
+}
+
+.recruiters-main .card .image img {
+    width: 60px;
+    height: 54px;
+}
+
+.recruiters-main .card .info {
+    margin-top: 10px !important;
+}
+
+.recruiters-main .card .info h5{
+    color: #05264e;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.recruiters-main .card .rating{
+    margin-top: 5px!important;
+}
+
+.recruiters-main .card .rating i{
+    color: gold;
+    font-size: 11px;
+}
+
+.recruiters-main .card .rating span{
+    margin-left: 8px!important;
+    color: #a0abb8;
+    font-weight: 500!important;
+    font-size: 12px!important;
+    line-height: 18px!important;
+}
