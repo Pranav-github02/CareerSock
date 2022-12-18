@@ -11,7 +11,7 @@ class Recruiters_main extends PureComponent {
         }
     }
     componentDidMount() {
-        let url = `http://localhost:5000/recruiters`
+        let url = `https://careersockserver-env-1.eba-pjpi9zpp.ap-south-1.elasticbeanstalk.com/recruiters`
         axios.get(url)
             .then(res => {
                 this.setState({ recruiters: res.data })

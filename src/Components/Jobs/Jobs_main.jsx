@@ -11,7 +11,7 @@ class Jobs_main extends PureComponent {
         }
     }
     componentDidMount() {
-        let url = `http://localhost:5000/jobs`
+        let url = `https://careersockserver-env-1.eba-pjpi9zpp.ap-south-1.elasticbeanstalk.com/jobs`
         axios.get(url)
             .then(res => {
                 this.setState({ jobs: res.data })
