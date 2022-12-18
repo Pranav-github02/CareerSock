@@ -6,7 +6,7 @@ import { UserContext } from '../../App';
 const Navbar = () => {
     const { state, dispatch } = useContext(UserContext)
     const Logout = async () => {
-        const res = await fetch("http://localhost:5000/logout", {
+        const res = await fetch("https://careersockserver-env-1.eba-pjpi9zpp.ap-south-1.elasticbeanstalk.com/logout", {
             method: "GET",
         });
         if (res.status === 200) {
