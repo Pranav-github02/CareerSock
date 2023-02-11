@@ -23,11 +23,11 @@ const Navbar = () => {
                     <NavLink to="/" className="nav-link" aria-current="page">Home</NavLink>
                     <NavLink to="/jobs" className="nav-link">Jobs</NavLink>
                     <NavLink to="/recruiters" className="nav-link">Recruiters</NavLink>
-                    <div class="nav-item dropdown">
+                    <div className="nav-item dropdown">
                         <NavLink className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i className="fa-solid fa-user-large"></i>
                         </NavLink>
-                        <ul class="dropdown-menu">
+                        <ul className="dropdown-menu">
                             <li><NavLink to="/dashboard" className="dropdown-item">Dashboard</NavLink></li>
                             <li><NavLink className="dropdown-item" onClick={() => Logout()}>Logout</NavLink></li>
                         </ul>
