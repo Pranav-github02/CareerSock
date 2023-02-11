@@ -1,9 +1,11 @@
-.navbar #navbar {
-    /* margin-right: 100px; */
+.navbar-nav .dropdown-menu{
+    --bs-dropdown-min-width: 4rem;
 }
-
-.navbar .login-signup {
-    /* display: inline-block; */
-    /* min-width: 215px;
-    text-align: right; */
+.navbar-nav .dropdown-menu .dropdown-item{
+    color: var(--bs-dropdown-link-color);
+    background-color: white;
+}
+.navbar-nav .dropdown-menu .dropdown-item:hover{
+    color: var(--bs-dropdown-link-active-color);
+    background-color: var(--bs-dropdown-link-active-bg);
 }
