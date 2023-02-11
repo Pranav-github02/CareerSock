@@ -17,7 +17,7 @@ const Signin = () => {
             email: data.email,
             password: "loggedinwithgoogle"
         }
-        const res = await fetch("https://careersockserver-env-1.eba-pjpi9zpp.ap-south-1.elasticbeanstalk.com/login", {
+        const res = await fetch("http://localhost:5000/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -63,7 +63,7 @@ const Signin = () => {
                 email: email,
                 password: password
             }
-            const res = await fetch("https://careersockserver-env-1.eba-pjpi9zpp.ap-south-1.elasticbeanstalk.com/login", {
+            const res = await fetch("http://localhost:5000/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -19,7 +19,7 @@ const Register = () => {
             password: "loggedinwithgoogle",
             type: "individual"
         }
-        const res = await fetch("https://careersockserver-env-1.eba-pjpi9zpp.ap-south-1.elasticbeanstalk.com/signup", {
+        const res = await fetch("http://localhost:5000/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -39,6 +39,7 @@ const Register = () => {
     function handleCallbackResponse(response) {
         var data = jwt_decode(response.credential);
         signupWithGoogle(data)
+        console.log(data);
     }
 
     useEffect(() => {
@@ -69,7 +70,7 @@ const Register = () => {
                 password: password,
                 type: type
             }
-            const res = await fetch("https://careersockserver-env-1.eba-pjpi9zpp.ap-south-1.elasticbeanstalk.com/signup", {
+            const res = await fetch("http://localhost:5000/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
