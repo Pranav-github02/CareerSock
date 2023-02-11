@@ -8,3 +8,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+#root ::-webkit-input-placeholder {
+  color: #B2BEB5;
+}
+
+#root ::-moz-placeholder{
+  color: #B2BEB5;
+}

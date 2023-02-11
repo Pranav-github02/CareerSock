@@ -18,7 +18,6 @@
 }
 
 .profile-banner-inner {
-    /* display: table-cell; */
     margin-top: 100px;
     vertical-align: bottom;
     text-align: center;
@@ -32,7 +31,7 @@
 }
 
 .dashboard-main {
-    padding-bottom: 90px;
+    padding-bottom: 30px;
     padding-top: 120px;
     background-color: #fff;
     transform: none;
@@ -42,7 +41,6 @@
     position: relative;
     overflow: visible;
     box-sizing: border-box;
-    /* min-height: 1px; */
     margin-bottom: 30px;
 }
 
@@ -75,8 +73,161 @@
 }
 
 .dashboard-main .leftSidebar .sidebar .inner .change-pic {
-    border-radius: 10px;
-    margin: 10px;
-    display: block;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.dashboard-main .leftSidebar .sidebar .inner .change-pic .change-pic-grid {
     width: 128px;
+    height: 128px;
+    overflow: hidden;
+    border-radius: 10px;
+    top: 30px;
+    position: relative;
+}
+
+.dashboard-main .leftSidebar .sidebar .inner .change-pic button {
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0) !important;
+    transition: all 0.3s ease !important;
+    text-shadow: 0 0 0 #fff, 400px 0 0 #fff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: inline-table;
+    background-color: #1967d2;
+    outline: none;
+    border: none;
+    font-weight: 600;
+}
+
+.dashboard-main .leftSidebar .sidebar .inner .change-pic input {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+}
+
+.dashboard-main .leftSidebar .sidebar .inner h5 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-main .leftSidebar .sidebar .inner .nav-list a {
+    color: #17171d;
+    padding: 12px;
+}
+
+.dashboard-main .leftSidebar .sidebar .inner .nav-list .active {
+    color: #1967d2;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px rgb(180 205 237 / 70%);
+}
+
+
+.dashboard-main .leftSidebar .sidebar .inner .nav-list i {
+    font-size: 18px;
+    margin-right: 25px;
+    color: #1967d2;
+}
+
+.dashboard-main .rightSidebar {
+    margin-bottom: 30px;
+}
+
+.dashboard-main .rightSidebar .inner {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #f9fcff;
+}
+
+.dashboard-main .rightSidebar .inner .panel {
+    border-radius: 10px;
+    background: #fff;
+}
+
+.dashboard-main .rightSidebar .inner .panel .panel-heading {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+
+.dashboard-main .rightSidebar .inner .panel .panel-heading h5 {
+    margin: 0px;
+    font-weight: 500;
+    /* font-size: 18px; */
+}
+
+.dashboard-main .rightSidebar .inner .panel .panel-body {
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.dashboard-main .rightSidebar .inner .panel .panel-body .form-group {
+    margin-bottom: 30px;
+}
+
+.dashboard-main .rightSidebar .inner .panel .panel-body .form-group .input-box {
+    position: relative;
+}
+
+.dashboard-main .rightSidebar .inner .panel .panel-body .form-group .input-box input {
+    padding-left: 35px;
+    width: 100%;
+    height: 60px;
+    /* padding: 20px; */
+    border: none;
+    background-color: #f0f6fe;
+    border-radius: 10px;
+}
+
+.dashboard-main .rightSidebar .inner .panel .panel-body .form-group .input-box input::-webkit-outer-spin-button,
+.dashboard-main .rightSidebar .inner .panel .panel-body .form-group .input-box input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.dashboard-main .rightSidebar .inner .panel .panel-body .form-group .input-box i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 60px;
+    z-index: 5;
+    line-height: 60px;
+    text-align: center;
+    font-size: 16px;
+    color: #1967d2;
+}
+
+.dashboard-main .rightSidebar .inner .panel .panel-body .form-group textarea {
+    height: auto;
+    resize: none;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background-color: #f0f6fe;
+    border-radius: 10px;
+}
+
+.dashboard-main .rightSidebar .inner .panel .panel-body .text-left {
+    text-align: left;
+}
+
+.dashboard-main .rightSidebar .inner .panel .panel-body .text-left .save-btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
 }
