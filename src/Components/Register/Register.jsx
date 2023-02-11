@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import jwt_decode from 'jwt-decode'
 import './Register.css'
 import img1 from './media/img-1.svg'
 import img2 from './media/img-2.svg'
+import { UserContext } from '../../App';
 
 const Register = () => {
     const navigate = useNavigate();
+    const { dispatch } = useContext(UserContext)
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -33,7 +35,8 @@ const Register = () => {
             navigate("/login")
         } else if (res.status === 201) {
             window.alert("Registeration Successful");
-            navigate("/");
+            dispatch({ type: "USER", payload: true })
+            navigate("/dashboard");
         }
     }
     function handleCallbackResponse(response) {

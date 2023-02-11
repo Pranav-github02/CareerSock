@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from './logo.png'
 import './Navbar.css'
 import { UserContext } from '../../App';
 const Navbar = () => {
+    const navigate = useNavigate();
     const { state, dispatch } = useContext(UserContext)
     const Logout = async () => {
         const res = await fetch("http://localhost:5000/logout", {
@@ -12,6 +13,7 @@ const Navbar = () => {
         if (res.status === 200) {
             console.log("session destroyed");
             dispatch({ type: "USER", payload: false })
+            navigate("/");
         }
     }
     const RenderMenu = () => {
@@ -21,7 +23,7 @@ const Navbar = () => {
                     <NavLink to="/" className="nav-link" aria-current="page">Home</NavLink>
                     <NavLink to="/jobs" className="nav-link">Jobs</NavLink>
                     <NavLink to="/recruiters" className="nav-link">Recruiters</NavLink>
-                    {/* <div class="nav-item dropdown">
+                    <div class="nav-item dropdown">
                         <NavLink className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i className="fa-solid fa-user-large"></i>
                         </NavLink>
@@ -29,7 +31,7 @@ const Navbar = () => {
                             <li><NavLink to="/dashboard" className="dropdown-item">Dashboard</NavLink></li>
                             <li><NavLink className="dropdown-item" onClick={() => Logout()}>Logout</NavLink></li>
                         </ul>
-                    </div> */}
+                    </div>
                 </div>
             )
         } else {
@@ -40,15 +42,6 @@ const Navbar = () => {
                     <NavLink to="/recruiters" className="nav-link">Recruiters</NavLink>
                     <NavLink className="nav-link" to="/signup">Register</NavLink>
                     <NavLink className="nav-link" to="/login"><input className='btn btn-primary' type="button" value="Sign in" /></NavLink>
-                    <div class="nav-item dropdown">
-                        <NavLink className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i className="fa-solid fa-user-large"></i>
-                        </NavLink>
-                        <ul class="dropdown-menu">
-                            <li><NavLink to="/dashboard" className="dropdown-item">Dashboard</NavLink></li>
-                            <li><NavLink className="dropdown-item" onClick={() => Logout()}>Logout</NavLink></li>
-                        </ul>
-                    </div>
                 </div>
             )
         }

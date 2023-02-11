@@ -29,8 +29,8 @@ const Signin = () => {
         } else if (res.status === 400) {
             window.alert("Incorrect email or password")
         } else if (res.status === 201) {
-            dispatch({ type: "USER", payload: true })
             window.alert("Signin successful")
+            dispatch({ type: "USER", payload: true })
             navigate("/");
         }
     }
@@ -121,10 +121,10 @@ const Signin = () => {
                             </form>
                         </div>
                         <div className='img-1 d-none d-lg-block'>
-                            <img src={img1} alt=""/>
+                            <img src={img1} alt="" />
                         </div>
                         <div className='img-2'>
-                            <img src={img2} alt=""/>
+                            <img src={img2} alt="" />
                         </div>
                     </div>
                 </div>
