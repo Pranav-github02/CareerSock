@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
         <div className='bottom'>
           <div className='text-center'>
-            Copyright &#169; 2022 by Career Sock. All Rights Reserved
+            Copyright &#169; 2023 by Career Sock. All Rights Reserved
           </div>
         </div>
       </div>
