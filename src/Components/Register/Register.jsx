@@ -36,13 +36,19 @@ const Register = () => {
         } else if (res.status === 201) {
             window.alert("Registeration Successful");
             dispatch({ type: "USER", payload: true })
-            navigate("/dashboard");
+            localStorage.setItem("email", user.email)
+            navigate("/dashboard", {
+                state: {
+                    name: user.name,
+                    email: user.email,
+                    type: user.type
+                }
+            });
         }
     }
     function handleCallbackResponse(response) {
         var data = jwt_decode(response.credential);
         signupWithGoogle(data)
-        console.log(data);
     }
 
     useEffect(() => {
@@ -87,7 +93,15 @@ const Register = () => {
                 navigate("/login")
             } else if (res.status === 201) {
                 window.alert("Registeration Successful");
-                navigate("/");
+                dispatch({ type: "USER", payload: true })
+                localStorage.setItem("email", user.email)
+                navigate("/dashboard", {
+                    state: {
+                        name: user.name,
+                        email: user.email,
+                        type: user.type
+                    }
+                });
             }
         }
     }

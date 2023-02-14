@@ -31,6 +31,7 @@ const Signin = () => {
         } else if (res.status === 201) {
             window.alert("Signin successful")
             dispatch({ type: "USER", payload: true })
+            localStorage.setItem("email",user.email)
             navigate("/");
         }
     }
@@ -76,6 +77,8 @@ const Signin = () => {
                 window.alert("Incorrect email or password")
             } else if (res.status === 201) {
                 window.alert("Signin successful")
+                dispatch({ type: "USER", payload: true })
+                localStorage.setItem("email",user.email)
                 navigate("/");
             }
         }

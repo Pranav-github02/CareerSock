@@ -14,10 +14,11 @@ const Navbar = () => {
             console.log("session destroyed");
             dispatch({ type: "USER", payload: false })
             navigate("/");
+            localStorage.clear();
         }
     }
     const RenderMenu = () => {
-        if (state) {
+        if (state || localStorage.getItem("email") !== null) {
             return (
                 <div className="navbar-nav">
                     <NavLink to="/" className="nav-link" aria-current="page">Home</NavLink>
