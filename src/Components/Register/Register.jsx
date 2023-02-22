@@ -36,14 +36,10 @@ const Register = () => {
         } else if (res.status === 201) {
             window.alert("Registeration Successful");
             dispatch({ type: "USER", payload: true })
+            localStorage.setItem("name", user.name)
             localStorage.setItem("email", user.email)
-            navigate("/dashboard", {
-                state: {
-                    name: user.name,
-                    email: user.email,
-                    type: user.type
-                }
-            });
+            localStorage.setItem("user_type", user.type)
+            navigate("/dashboard");
         }
     }
     function handleCallbackResponse(response) {
@@ -94,14 +90,10 @@ const Register = () => {
             } else if (res.status === 201) {
                 window.alert("Registeration Successful");
                 dispatch({ type: "USER", payload: true })
+                localStorage.setItem("name", user.name)
                 localStorage.setItem("email", user.email)
-                navigate("/dashboard", {
-                    state: {
-                        name: user.name,
-                        email: user.email,
-                        type: user.type
-                    }
-                });
+                localStorage.setItem("user_type", user.type)
+                navigate("/dashboard");
             }
         }
     }
