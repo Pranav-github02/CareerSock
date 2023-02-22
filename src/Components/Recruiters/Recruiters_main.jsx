@@ -14,7 +14,7 @@ class Recruiters_main extends PureComponent {
         let url = `http://localhost:5000/recruiters`
         axios.get(url)
             .then(res => {
-                this.setState({ recruiters: res.data })
+                this.setState({ recruiters: res.data.entries })
             })
             .catch(err => console.error(err))
     }
